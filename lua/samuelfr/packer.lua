@@ -13,7 +13,12 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  use {'morhetz/gruvbox', config = function() vim.cmd.colorscheme("gruvbox") end }
+  use ({
+      'rose-pine/neovim',
+      config = function()
+          vim.cmd.colorscheme("rose-pine")
+      end
+  })
 
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
   use('nvim-treesitter/playground')
